@@ -4,6 +4,11 @@ function Article (opts) {
   // TODO: Use the js object passed in to complete this constructor function:
   // Save ALL the properties of `opts` into `this`
   this.author = opts.author;
+  this.authorUrl = opts.authorUrl;
+  this.title = opts.title;
+  this.body = opts.body;
+  this.publishedOn = opts.publishedOn;
+  this.category = opts.category;
 }
 
 Article.prototype.toHtml = function() {
@@ -26,6 +31,8 @@ Article.prototype.toHtml = function() {
     as it now has real data attached to it! We need to account
     for that before this current article gets rendered to our
     DOM. */
+
+    $('article.template').removeClass('template');
     return $newArticle;
 };
 
